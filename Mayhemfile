@@ -1,0 +1,9 @@
+project: basis-universal
+target: basis-universal
+testsuite:
+  - file://webgl_videotest/6.1.01.basis
+
+cmds:
+  - cmd: /repo/bin/basisu @@ -validate
+    env:
+      DISABLE_SMOKETEST: '1'
