@@ -1,5 +1,5 @@
 project: basis-universal
-target: basis-universal
+target: basisu
 
 cmds:
   - cmd: /repo/bin/basisu @@ -validate
