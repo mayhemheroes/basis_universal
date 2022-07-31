@@ -2,6 +2,6 @@ project: basis-universal
 target: basisu
 
 cmds:
-  - cmd: /repo/bin/basisu @@ -validate
+  - cmd: /install/bin/basisu @@ -validate
     env:
       DISABLE_SMOKETEST: '1'
