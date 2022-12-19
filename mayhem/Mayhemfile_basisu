@@ -1,0 +1,7 @@
+project: basis-universal
+target: basisu
+
+cmds:
+  - cmd: /install/bin/basisu @@ -validate
+    env:
+      DISABLE_SMOKETEST: '1'
