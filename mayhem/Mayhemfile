@@ -1,0 +1,6 @@
+project: basis-universal
+target: floor-log2i
+
+cmds:
+  - cmd: /fuzz_floor_log2i
+    libfuzzer: true
