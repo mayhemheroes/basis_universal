@@ -5,11 +5,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential cmake clan
 
 COPY . /repo
 WORKDIR /repo/build
-RUN cmake .. -DCMAKE_INSTALL_PREFIX=/install
+RUN cmake ..
 RUN make -j8
-RUN make install
 RUN clang++ /repo/mayhem/fuzz_floor_log2i.cpp -fsanitize=fuzzer,address -I /repo/transcoder/ -o /fuzz
 
 FROM ubuntu:22.04 as package
-COPY --from=builder /install /install
 COPY --from=builder /fuzz /fuzz_floor_log2i
